@@ -8,6 +8,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    path: sample-app
+    repoURL: https://github.com/krishan-la/sample-argo-cd.git
     targetRevision: HEAD
