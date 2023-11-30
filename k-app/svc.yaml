@@ -1,10 +1,10 @@
 apiVersion: v1	
 kind: Service	
 metadata:	
-  name: app-update-active-capacity
+  name: app-service-update-active-capacity
 spec:	
   ports:	
   - port: 8000	
     targetPort: 8000	
   selector:	
-    app: app-update-active-capacity
+    app: app-service-update-active-capacity
