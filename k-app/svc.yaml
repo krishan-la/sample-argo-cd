@@ -1,10 +1,10 @@
 apiVersion: v1	
 kind: Service	
 metadata:	
-  name: guestbook-ui	
+  name: app-update-active-capacity
 spec:	
   ports:	
-  - port: 80	
-    targetPort: 80	
+  - port: 8000	
+    targetPort: 8000	
   selector:	
-    app: guestbook-ui
+    app: app-update-active-capacity

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: app-update-active-capacity
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: app-update-active-capacity
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: app-update-active-capacity
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-        name: guestbook-ui
+      - image: 958689846081.dkr.ecr.us-east-1.amazonaws.com/sample-python-fastapi:latest
+        name: app-update-active-capacity
         ports:
-        - containerPort: 80
+        - containerPort: 8000
