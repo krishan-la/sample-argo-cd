@@ -14,7 +14,7 @@ spec:
         app: app-update-active-capacity
     spec:
       containers:
-      - image: 958689846081.dkr.ecr.us-east-1.amazonaws.com/sample-python-fastapi:2.0.0
+      - image: 958689846081.dkr.ecr.us-east-1.amazonaws.com/sample-python-fastapi:2.1.0
         name: app-update-active-capacity
         ports:
         - containerPort: 8000
