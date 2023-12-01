@@ -7,4 +7,4 @@ spec:
   - port: 8000	
     targetPort: 8000	
   selector:	
-    app: app-service-update-active-capacity
+    app: app-update-active-capacity
