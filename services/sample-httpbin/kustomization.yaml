@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 namePrefix: sample-
+=======
+namePrefix: sample
+>>>>>>> b94ee900d73ee5595eee12a3262efd27269b3169
 
 resources:
   - deployment.yaml
