@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: argo-apps
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/krishan-la/sample-argo-cd.git
+        revision: HEAD
+        directories:
+          - path: services/*
+  template:
+    metadata:
+      name: "{{path.basename}}"
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/krishan-la/sample-argo-cd.git
+        targetRevision: HEAD
+        path: "{{path}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'argo-apps'
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
+        automated:
+          prune: true
